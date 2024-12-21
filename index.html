@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="mainWrapper">
+
+            <h1 class="heading">Multiple Timers App</h1>
+
+            <div class="TimerWrapper" id="setTimeWrapper">
+                <p class="TimeText" id="setTimeText">Set Timer: </p>
+                <div class="timevalueWrapper" id="timeInputWrapper">
+                    <input type="number"  class="timeInput timeValue" id="hourInput" placeholder="hh">
+                    <p>:</p>
+                    <input type="text" class="timeInput timeValue" id="minuteInput" placeholder="mm">
+                    <p>:</p>
+                    <input type="number" class="timeInput timeValue" min="01" id="secondInput" placeholder="ss">
+                </div>
+                <button class="TimeButton setButton" id="setTimeButton" onclick="setTimer">Set</button>
+            </div>
+    
+            <div class="timeDisplaySection">
+                <div class="timeDisplayText">
+                    <p>Current Timers</p>
+                </div>
+                <div class="timeDisplayDiv" id="timeDisplayDiv">
+                    <p class="timeDefaultText" id="timeDefaultText">You have no timers currently</p>
+    
+                    <div class="showTimer">
+    
+                        <div class="TimerWrapper">
+                            <p class="TimeText">Time Left: </p>
+                            <div class="timevalueWrapper">
+                                <p class="timeValue">00</p>
+                                <p>:</p>
+                                <p class="timeValue">00</p>
+                                <p>:</p>
+                                <p class="timeValue">00</p>
+                            </div>
+                            <button class="TimeButton DeleteButton" onclick="deleteTimer">Delete</button>
+                        </div>
+    
+                        <div class="TimerWrapper TimerFinish">
+                            <p class="timeIsUpText">Timer Is Up !</p>
+                            <button class="TimeButton StopButton" onclick="stopTimer">Stop</button>
+                        </div>
+    
+                    </div>
+    
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="basic.js"></script>
+</body>
+</html>

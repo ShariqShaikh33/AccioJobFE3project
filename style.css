@@ -1,0 +1,151 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Arial";
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+.mainWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading{
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+
+.TimeButton{
+    background-color: yellow;
+    border: none;
+    border-radius: 26px;
+    height: 2rem;
+    width: 20%;
+    font-size: 24px;
+}
+.TimeButton:active{
+    background-color: orange;
+}
+
+
+.TimerWrapper{
+    border-radius: 20px;
+    background-color: #34344A;
+    font-size: 24px;
+    display: flex;
+    flex-direction: rows;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px 0px 10px;
+    width: 700px;
+    height: 5rem;
+}
+
+
+
+.timevalueWrapper{
+    border: none;
+    display: flex;
+    flex-direction: rows;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    gap: 15px;
+    
+    
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.timeValue{
+    border: none;
+    background: none;
+    text-align: center;
+    -webkit-appearence: none;
+    width: 2.8rem;
+    color: white;
+    font-size: 26px;
+}
+.timeInput{
+    text-decoration: underline;
+}
+
+.timeValue::placeholder{
+    color: white;
+}
+
+
+
+
+
+.timeDisplaySection{
+    margin-top: 30px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.timeDisplayText{
+    background-color: gray;
+    border: 1px solid white;
+    border-radius: 26px;
+    width: 20%;
+    height: 3rem;
+    text-align: center;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+}
+
+.timeDefaultText{
+    font-size: 24px;
+}
+
+.showTimer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5%;
+    
+}
+
+.TimerFinish{
+    background-color: yellow;
+
+}
+
+.timeIsUpText{
+    width: 90%;
+    font-size: 40px;
+    text-align: center;
+    color: #34344A;
+    font-weight: bold;
+}
+
+.StopButton{
+    background-color: #34344A; 
+    color: white;
+}
+
