@@ -121,7 +121,7 @@ input::-webkit-inner-spin-button {
     font-size: 24px;
 }
 
-.showTimer{
+.timeDisplayDiv{
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -149,3 +149,11 @@ input::-webkit-inner-spin-button {
     color: white;
 }
 
+
+.notVisible{
+    display: none;
+}
+
+.visible{
+    display: block;
+}

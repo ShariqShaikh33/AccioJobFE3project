@@ -21,7 +21,7 @@
                     <p>:</p>
                     <input type="number" class="timeInput timeValue" min="01" id="secondInput" placeholder="ss">
                 </div>
-                <button class="TimeButton setButton" id="setTimeButton" onclick="setTimer">Set</button>
+                <button class="TimeButton setButton" id="setTimeButton" onclick="setTimer()">Set</button>
             </div>
     
             <div class="timeDisplaySection">
@@ -29,27 +29,7 @@
                     <p>Current Timers</p>
                 </div>
                 <div class="timeDisplayDiv" id="timeDisplayDiv">
-                    <p class="timeDefaultText" id="timeDefaultText">You have no timers currently</p>
-    
-                    <div class="showTimer">
-    
-                        <div class="TimerWrapper">
-                            <p class="TimeText">Time Left: </p>
-                            <div class="timevalueWrapper">
-                                <p class="timeValue">00</p>
-                                <p>:</p>
-                                <p class="timeValue">00</p>
-                                <p>:</p>
-                                <p class="timeValue">00</p>
-                            </div>
-                            <button class="TimeButton DeleteButton" onclick="deleteTimer">Delete</button>
-                        </div>
-    
-                        <div class="TimerWrapper TimerFinish">
-                            <p class="timeIsUpText">Timer Is Up !</p>
-                            <button class="TimeButton StopButton" onclick="stopTimer">Stop</button>
-                        </div>
-    
+                    <p class="timeDefaultText visible" id="timeDefaultText">You have no timers currently</p>
                     </div>
     
                 </div>
