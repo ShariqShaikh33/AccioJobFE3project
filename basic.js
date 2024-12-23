@@ -32,12 +32,12 @@ function addTimer(id,hh,mm,ss){
 let showTimer = document.getElementById("timeDisplayDiv");
 let timerArr=[];
 
-
 //Function for adding the new timer in the Display timer section
 function setTimer(){
     console.log("hii");
-    let id=timerArr.length;
+    let id=(Math.random()*10000).toFixed(0);
     timerArr.push(`${id}`);
+    console.log(timerArr);
     
     let hh = document.getElementById("hourInput").value;
     let mm = document.getElementById("minuteInput").value;
@@ -74,13 +74,15 @@ function setTimer(){
         var minutes =mm;
         var seconds = ss--;
 
-        if(seconds<1 && minutes>1){
-            seconds=60;
+        if(seconds==0 && minutes!=0){
+            ss=59;
+            mm--;
         }
-        
-        
-        
-        
+        if(seconds==0 && minutes==0 && hours!=0){
+            ss=59;
+            mm=59;
+            hh--;
+        }
 
         // // Display the result in the element with id="demo"
         document.getElementById("hh"+id).innerHTML = hours ;
@@ -93,7 +95,11 @@ function setTimer(){
             document.getElementById(id).innerHTML = `<div class="TimerWrapper TimerFinish">
                                         <p class="timeIsUpText">Timer Is Up !</p>
                                         <button class="TimeButton StopButton" onclick="deleteTimer(${id})">Stop</button>
+                                        <audio id="audio${id}"><source src="DBZ Theme.mp3" type="audio/mpeg"></audio>
                                     </div>`
+            
+            
+            document.getElementById(`audio${id}`).play();
             clearInterval(x);
             
         }
@@ -128,8 +134,8 @@ function deleteTimer(id){
         }
     }
 
-    defaultTextVisibility();
 
+    defaultTextVisibility();
 
     console.log(timerArr);
 
